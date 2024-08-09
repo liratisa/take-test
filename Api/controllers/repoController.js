@@ -19,7 +19,7 @@ exports.getCsharpReposByUsername = async (req, res) => {
 			.slice(0, 5)
 			.map((repo) => ({
 				name: repo.full_name,
-				description: repo.description || "Nenhuma descrição informada",
+				description: repo.description || "Nenhuma descrição informada.",
 				avatar: repo.owner.avatar_url,
 			}));
 
