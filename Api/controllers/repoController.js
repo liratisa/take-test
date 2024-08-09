@@ -1,5 +1,9 @@
 const axios = require("axios");
 
+exports.initialRoute = (req, res) => {
+	res.status(200).json("API funcionando!");
+};
+
 exports.getCsharpReposByUsername = async (req, res) => {
 	try {
 		const username = req.query.username;
@@ -26,6 +30,6 @@ exports.getCsharpReposByUsername = async (req, res) => {
 		res.status(200).json(filteredRepos);
 	} catch (error) {
 		console.error(error);
-		res.status(500).send("Ocorreu um erro durante a requisição");
+		res.status(500).json("Ocorreu um erro durante a requisição");
 	}
 };
