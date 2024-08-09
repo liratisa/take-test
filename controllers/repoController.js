@@ -25,6 +25,7 @@ exports.getRepos = async (req, res) => {
 				name: repo.full_name,
 				description: repo.description || "Nenhuma descrição informada",
 				url: repo.html_url,
+				avatar: repo.owner.avatar_url,
 			}));
 
 		res.status(200).json(filteredRepos);
