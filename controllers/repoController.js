@@ -1,10 +1,6 @@
 const axios = require("axios");
 
-exports.publicRoute = (req, res) => {
-	res.status(200).json("API funcionando!");
-};
-
-exports.getRepos = async (req, res) => {
+exports.getCsharpReposByUsername = async (req, res) => {
 	try {
 		const username = req.query.username;
 
